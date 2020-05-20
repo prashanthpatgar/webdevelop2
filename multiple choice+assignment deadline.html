@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>my site</title>
+</head>
+<body bgcolor=#ffffff>
+
+<h3>Multiple Choice</h3>
+<form method="post" action="mailto:prashanthpatgar904@gmail.com?subject=Multiple Choice" enctype="text/plain">
+
+
+<P>1. The color of the apple is:<BR>
+<input type="radio" name="1.The color of the apple is" value="blue">blue<BR>
+<input type="radio" name="1.The color of the apple is" value="red">red<BR>
+<input type="radio" name="1.The color of the apple is" value="orange">orange<BR>
+<input type="radio" name="1.The color of the apple is" value="green">green<BR>
+</p>
+
+<P>2. The color of the sky is:<BR>
+<input type="radio" name="2. The color of the sky is" value="yellow">yellow<BR>
+<input type="radio" name="2. The color of the sky is" value="red">red<BR>
+<input type="radio" name="2. The color of the sky is" value="green">green<BR>
+<input type="radio" name="2. The color of the sky is" value="blue">blue<BR>
+</p>
+
+<P>3. The color of the watermelon is:<BR>
+<input type="radio" name="3. The color of the watermelon is" value="green">green<BR>
+<input type="radio" name="3. The color of the watermelon is" value="blue">blue<BR>
+<input type="radio" name="3. The color of the watermelon is" value="red">red<BR>
+<input type="radio" name="3. The color of the watermelon is" value="yellow">yellow<BR>
+</p>
+
+<br>
+<br>
+<br>
+<br>
+<input type="submit" value="Send Form">
+<input type="reset" value="Clear Form">
+</form>
+</body>
+<style> 
+    p { 
+    text-align: center; 
+    font-size: 20px; 
+    } 
+    </style> 
+    </head> 
+    <body> 
+    <p id="deadline"></p> 
+    <script> 
+    var deadline = new Date("May 17, 2020 20:37:25").getTime(); 
+    var x = setInterval(function() { 
+    var now = new Date().getTime(); 
+    var t = deadline - now; 
+    var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+    var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+    var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+    var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+    document.getElementById("deadline").innerHTML = days + "d " 
+    + hours + "h " + minutes + "m " + seconds + "s "; 
+        if (t < 0) { 
+            clearInterval(x); 
+            document.getElementById("deadline").innerHTML = "EXPIRED"; 
+        } 
+    }, 1000); 
+    </script> 
+    
+    </body> 
+</html>
